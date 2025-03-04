@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Donas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Las Delicas de Tulio</a>
+        </div>
+        <a class="nav-link" href="{{ url_for('contacto') }}">Contacto</a>
+    </nav>
+
+    <header class="hero">
+        <div class="container text-center">
+            <h1>Las Delicias de Tulio</h1>
+            <p>Las Delicias de Tulio - Venta de minidonas y bombas de chocolate.</p>
+        </div>
+    </header>
+
+    <section class="productos container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/Donas.jpg') }}" class="card-img-top product-img-1" alt="Donas">
+                    <div class="card-body">
+                        <h5 class="card-title">MiniDonas Personalizadas</h5>
+                        <p class="card-text">Minidonas para diversas temáticas y festividades, ideales para cualquier ocasión.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/Bombas.jpg') }}" class="card-img-top product-img-2" alt="Bombas">
+                    <div class="card-body">
+                        <h5 class="card-title">Bombas de chocolate</h5>
+                        <p class="card-text">Bombas de chocolate en tres tamaños diferentes, ideales para cualquier ocasión.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/Ramo.jpg') }}" class="card-img-top product-img-3" alt="Ramo">
+                    <div class="card-body">
+                        <h5 class="card-title">Ramo de Minidonas</h5>
+                        <p class="card-text">Ramo de minidonas con temática personalizada, perfecto para sorprender.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sobre-nosotros container mt-4 text-center">
+        <h2>Sobre Nosotros</h2>
+        <p>En Las Delicias de Tulio, somos un emprendimiento familiar apasionado por la repostería artesanal. Nos especializamos en la creación de minidonas personalizadas, bombas de chocolate, yogures y tortas, elaborados con los mejores ingredientes y mucho amor. Cada uno de nuestros productos está diseñado para endulzar tus momentos especiales y sorprender a tus seres queridos. ¡Déjanos ser parte de tus celebraciones con nuestras dulces creaciones!</p>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='img/unnamed (1).jpg') }}" class="img-fluid historia-img-1" alt="Historia 1">
+            </div>
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='img/unnamed (2).jpg') }}" class="img-fluid historia-img-2" alt="Historia 2">
+            </div>
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='img/unnamed (3).jpg') }}" class="img-fluid historia-img-3" alt="Historia 3">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='img/unnamed (4).jpg') }}" class="img-fluid historia-img-4" alt="Historia 4">
+            </div>
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='img/unnamed (5).jpg') }}" class="img-fluid historia-img-5" alt="Historia 5">
+            </div>
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='img/unnamed (6).jpg') }}" class="img-fluid historia-img-6" alt="Historia 6">
+            </div>
+        </div>
+    </section>        
+
+    <footer class="text-center mt-4 p-3 bg-light">
+        <p>© 2025 Las Delicas de Tulio - Francisco Javier Peña Cantor.</p>
+    </footer>
+</body>
+</html>
