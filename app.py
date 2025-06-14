@@ -10,5 +10,5 @@ def home():
 def contacto():
     return render_template('contacto.html')
 
-#if __name__ == '__main__':
- #   app.run(debug=True)
+if __name__ == '__main__':
+     app.run(debug=True)
