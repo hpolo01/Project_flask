@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - Las Delicias de Tulio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fffbf0;
+            font-family: 'Arial', sans-serif;
+        }
+        .contact-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .btn-custom {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn-custom:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">Las Delicias de Tulio</a>
+        </div>
+    </nav>
+
+    <section class="contact-container text-center">
+        <h2>Contáctanos</h2>
+        <p>Déjanos tu información y nos pondremos en contacto contigo.</p>
+        
+        <form action="/enviar_contacto" method="POST" class="contact-form">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="numero" class="form-label">Número de Teléfono:</label>
+                <input type="tel" id="numero" name="numero" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="submit" class="btn-custom">Enviar</button>
+        </form>
+
+        <div class="btn-container">
+            <a href="/" class="btn-custom">Volver a Inicio</a>
+            <a href="/ubicacion" class="btn-custom">Ver Ubicación</a>
+        </div>
+    </section>
+</body>
+</html>
